@@ -1,0 +1,16 @@
+const sortByStrings = (s,t) => {
+  const tArray = t.split("")
+  const array = []
+  tArray.forEach(element => {
+    const found = s.match(element)
+    const times = s.split(element).length-1
+    if(found){
+     for(i=0; i < times; i++) {
+       array.push(element)
+     }
+    }
+  })
+  console.log(array.join(''))
+};
+
+sortByStrings("good","odg")
